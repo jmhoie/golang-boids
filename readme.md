@@ -18,8 +18,12 @@ In order to implement these rulesets, the boids need to be able to get the posit
 
 ### Alignment
 The *alignment* will make the boids form groups by averaging out the current velocities of all the boids in a given view-space. I.e. boids close to eachother will move in the same direction.  
-This is accomplished by taking the target vector (where a boid is trying to move) and subtracting it by the current velocity vector. This results in an acceleration vector, which we then add to the original velocity vector. To smoothen out this movement, we also multiply that acceleration vector by an adjustment rate (a float between 0 and 1). This will slow down the movement which makes it less jittery.  
-![\[target(0,4) - current(3,3) = acceleration(-3,1)\]](https://latex.codecogs.com/gif.latex?target%280%2C4%29%20-%20current%283%2C3%29%20%3D%20acceleration%28-3%2C1%29)
+This is accomplished by taking the target vector (where a boid is trying to move) and subtracting it by the current velocity vector. This results in an acceleration vector, which we then add to the original velocity vector. To smoothen out this movement, we also multiply that acceleration vector by an adjustment rate (a float between 0 and 1). This will slow down the movement which makes it less jittery.
+
+
+![$\large target(0,4) - current(3,3) = acceleration(-3,1)$](https://latex.codecogs.com/png.latex?%5Cinline%20%5Cdpi%7B150%7D%20%5Clarge%20target%280%2C4%29%20-%20current%283%2C3%29%20%3D%20acceleration%28-3%2C1%29)
+
+![$\large acceleration(-3,1)*adjRate(0.5) + current(3,3) = new(1.5,3.5)$](https://latex.codecogs.com/png.latex?%5Cinline%20%5Cdpi%7B150%7D%20%5Clarge%20acceleration%28-3%2C1%29*adjRate%280.5%29%20&plus;%20current%283%2C3%29%20%3D%20new%281.5%2C3.5%29)
 
 
 
