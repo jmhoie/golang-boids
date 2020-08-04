@@ -19,7 +19,7 @@ In order to implement these rulesets, the boids need to be able to get the posit
 ### Alignment
 The *alignment* will make the boids form groups by averaging out the current velocities of all the boids in a given view-space. I.e. boids close to eachother will move in the same direction.  
 This is accomplished by taking the target vector (where a boid is trying to move) and subtracting it by the current velocity vector. This results in an acceleration vector, which we then add to the original velocity vector. To smoothen out this movement, we also multiply that acceleration vector by an adjustment rate (a float between 0 and 1). This will slow down the movement which makes it less jittery.  
-![Example:](<img src="http://www.sciweavers.org/tex2img.php?eq=target%280%2C4%29%20-%20current%283%2C3%29%20%3D%20acceleration%28-3%2C1%29%0A%0Aacceleration%28-3%2C1%29%20%2A%20adjRate%280.5%29%20%2B%20current%283%2C3%29%20%3D%20new%281.5%2C%203.5%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="target(0,4) - current(3,3) = acceleration(-3,1)acceleration(-3,1) * adjRate(0.5) + current(3,3) = new(1.5, 3.5)" width="522" height="56" />)
+$target(0,4) - current(3,3) = acceleration(-3,1)$
 
 
 This is accomplished by taking the target vector (where it a boid is trying to move) and subtracting it by the current velocity vector. This results in an acceleration vector, which we then add to the original velocity vector. To smoothen out the movement, we also multiply the acceleration vector by an ajudstment rate (number between 0 and 1). This slows down the movement which makes it less "jittery".  
