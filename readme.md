@@ -67,7 +67,7 @@ This bounce acceleration will be larger the closer we are to the wall. We add th
 
 ## 2. Running The Simulation
 You need a Go compiler (gc or gccgo).  
-You also need the [Erbiten](https://github.com/hajimehoshi/ebiten) library to run this program. 
+You also need the [Erbiten](https://github.com/hajimehoshi/ebiten) library to run this program. Follow the link to their webpage for instruction on how to do this.  
 
 Compile and create an executable file:  
 `go build`  
@@ -75,5 +75,5 @@ Compile and create an executable file:
 Then run that executable.  
 
 
-Example:  
+Example (Windows 10):  
 `.\golang-boids`
