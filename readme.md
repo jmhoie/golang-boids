@@ -1,7 +1,7 @@
 # Boids Simulation <!-- omit in toc -->
 ***This simulation was made by following the Udemy course [*Mastering Multithreaded Programming with Go (Golang)*](https://www.udemy.com/course/multithreading-in-go-lang/) by James Cutajar.***  
 
-For instructions on how to run this program, see ***Running The Program***
+For instructions on how to run this program, see [*Running The Simulation*](#2-running-the-simulation)
 
 In this project we will be using GoRoutines to model Boids. Using concurrent programming to model a problem can make things significantly simpler.
 
@@ -15,7 +15,7 @@ Instead of having a complicated simulation with alot of parameters, we will be u
   - [1.3. Cohesion](#13-cohesion)
   - [1.4. Separation](#14-separation)
   - [1.5. Wall-Bounce](#15-wall-bounce)
-- [2. Running The Program](#2-running-the-program)
+- [2. Running The Simulation](#2-running-the-simulation)
 
 ## 1. Implementation
 We'll be plotting dots in a 2D coordinate system, where each dot will represent a boid.  
@@ -65,7 +65,7 @@ The fourth and final element of this program is the wall-bounce. When a boid app
 
 This bounce acceleration will be larger the closer we are to the wall. We add this to all the other accelerations (alignment, cohesion, separation) and the current velocity. This is the final new velocity.
 
-## 2. Running The Program
+## 2. Running The Simulation
 You need a Go compiler (gc or gccgo).  
 You also need the [Erbiten](https://github.com/hajimehoshi/ebiten) library to run this program. 
 
