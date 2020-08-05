@@ -40,7 +40,6 @@ func main() {
 			boidMap[i][j] = -1
 		}
 	}
-
 	for i := 0; i < boidCount; i++ {
 		createBoid(i)
 	}
